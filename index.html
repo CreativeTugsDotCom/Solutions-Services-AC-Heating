@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions Services AC & Heating | The HVAC Field Journal | Houston, TX</title>
+    <meta name="description" content="Houston's family-owned residential & commercial HVAC, air distribution, equipment replacement, and technical heating & cooling specialists.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,600;0,800;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        limestone: '#F1EFE7',
+                        carbon: '#20221E',
+                        vermilion: '#EF5738',
+                        workshop: '#475446',
+                        mist: '#D8DCD5',
+                        'limestone-dark': '#E5E2D6',
+                        'carbon-light': '#2D302A'
+                    },
+                    fontFamily: {
+                        sans: ['"DM Sans"', 'sans-serif'],
+                        display: ['"Archivo"', 'sans-serif'],
+                        mono: ['"Space Mono"', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for specialized editorial styling and animations -->
+    <style>
+        body {
+            background-color: #F1EFE7;
+            color: #20221E;
+            font-family: 'DM Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Editorial Fine Lines */
+        .border-fine {
+            border-color: rgba(32, 34, 30, 0.15);
+        }
+        .border-fine-light {
+            border-color: rgba(241, 239, 231, 0.15);
+        }
+
+        /* Airflow animation keyframes */
+        @keyframes flowDash {
+            to {
+                stroke-dashoffset: -40;
+            }
+        }
+        .animate-airflow {
+            stroke-dasharray: 6, 6;
+            animation: flowDash 1.5s linear infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+        .animate-pulse-subtle {
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+
+        /* Image hover reveal effect */
+        .img-editorial {
+            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+            filter: grayscale(15%) contrast(102%);
+        }
+        .img-container:hover .img-editorial {
+            transform: scale(1.03);
+            filter: grayscale(0%) contrast(105%);
+        }
+
+        /* Modal lightbox animation */
+        .lightbox-modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1EFE7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #20221E;
+        }
+
+        /* 360 Whirl Animation for Footer Logo */
+        @keyframes logoWhirl {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .animate-logo-whirl {
+            animation: logoWhirl 12s linear infinite;
+            transform-origin: center center;
+            will-change: transform;
+        }
+        .animate-logo-whirl:hover {
+            animation-duration: 3s;
+        }
+    </style>
+</head>
+<body class="selection:bg-vermilion selection:text-white">
+
+    <!-- HEADER: THE WORKSHOP INDEX -->
+    <header id="site-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-limestone/95 backdrop-blur-md border-b border-fine">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo area using the official transparent brand mark with enhanced color saturation and seamless blending -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="h-12 w-auto flex items-center justify-center p-0.5 transition-transform duration-300 group-hover:scale-105">
+                    <img 
+                        src="https://raw.githubusercontent.com/CreativeTugsDotCom/FES/refs/heads/main/ac-logo.png" 
+                        alt="Solutions Services AC & Heating Logo" 
+                        class="h-full w-auto object-contain filter contrast-150 saturate-[1.8] drop-shadow-[0_2px_4px_rgba(32,34,30,0.15)] mix-blend-multiply" 
+                        onerror="this.src='https://placehold.co/120x40/20221E/F1EFE7?text=SS+AC'" 
+                    />
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-display font-bold tracking-tight text-carbon text-sm sm:text-base leading-tight uppercase">
+                        SOLUTIONS SERVICES
+                    </span>
+                    <span class="font-mono text-[10px] tracking-widest text-carbon/60 uppercase">
+                        AC & HEATING • HOUSTON, TX
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-mono text-xs tracking-wider uppercase">
+                <a href="#services" class="hover:text-vermilion transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-vermilion hover:after:w-full after:transition-all">01 // SERVICES</a>
+                <a href="#system-diagram" class="hover:text-vermilion transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-vermilion hover:after:w-full after:transition-all">02 // BLUEPRINT</a>
+                <a href="#field-work" class="hover:text-vermilion transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-vermilion hover:after:w-full after:transition-all">03 // FIELD JOURNAL</a>
+                <a href="#about" class="hover:text-vermilion transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-vermilion hover:after:w-full after:transition-all">04 // ABOUT</a>
+                <a href="#decision" class="hover:text-vermilion transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-vermilion hover:after:w-full after:transition-all">05 // REPAIR/REPLACE</a>
+            </nav>
+
+            <!-- CTA & Mobile Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="tel:+18325379691" class="hidden sm:inline-flex items-center gap-2 bg-vermilion text-white px-4 py-2.5 font-mono text-xs font-bold tracking-wider uppercase hover:bg-carbon transition-colors duration-300 shadow-sm">
+                    <span>CALL THE TEAM</span>
+                    <span class="text-sm">↗</span>
+                </a>
+
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-carbon hover:text-vermilion focus:outline-none" aria-label="Toggle navigation menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="menu-icon" stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-limestone border-b border-carbon/20 px-6 py-6 font-mono text-sm uppercase space-y-4">
+            <a href="#services" class="mobile-link block py-2 border-b border-carbon/10 hover:text-vermilion">01 // SERVICES</a>
+            <a href="#system-diagram" class="mobile-link block py-2 border-b border-carbon/10 hover:text-vermilion">02 // BLUEPRINT</a>
+            <a href="#field-work" class="mobile-link block py-2 border-b border-carbon/10 hover:text-vermilion">03 // FIELD JOURNAL</a>
+            <a href="#about" class="mobile-link block py-2 border-b border-carbon/10 hover:text-vermilion">04 // ABOUT</a>
+            <a href="#decision" class="mobile-link block py-2 border-b border-carbon/10 hover:text-vermilion">05 // REPAIR/REPLACE</a>
+            <a href="#contact" class="mobile-link block py-2 hover:text-vermilion">06 // CONTACT & BOOKING</a>
+            <div class="pt-4 border-t border-carbon/20">
+                <a href="tel:+18325379691" class="flex items-center justify-center gap-2 bg-vermilion text-white py-3 font-bold text-center">
+                    CALL +1 (832) 537-9691
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- HERO: ONE LARGE PHOTOGRAPH, ONE STRONG MESSAGE -->
+        <section class="relative min-h-[85vh] sm:min-h-[90vh] flex flex-col justify-end bg-carbon overflow-hidden px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+            
+            <!-- Cinematic Background Image with Gradient Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img 
+                    src="https://raw.githubusercontent.com/CreativeTugsDotCom/FES/refs/heads/main/m33Je0qUiFIMHMsJpVgdAVxzLJk-zBLqlMdzbSrVr9g.webp" 
+                    alt="HVAC technician inspecting mechanical condenser unit with digital diagnostics" 
+                    class="w-full h-full object-cover object-center opacity-75 transform scale-105 transition-transform duration-1000 ease-out"
+                    id="hero-bg-img"
+                />
+                <!-- Subtle Gradient Mask -->
+                <div class="absolute inset-0 bg-gradient-to-t from-carbon via-carbon/40 to-transparent"></div>
+                <div class="absolute inset-0 bg-carbon/15 mix-blend-multiply"></div>
+            </div>
+
+            <!-- Hero Overhead Meta & Content -->
+            <div class="relative z-10 max-w-7xl mx-auto w-full">
+                
+                <!-- Location & Technical Badge -->
+                <div class="inline-flex items-center gap-3 bg-vermilion text-white px-3 py-1 font-mono text-[11px] font-bold tracking-widest uppercase mb-6 shadow-md">
+                    <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                    <span>HOUSTON, TEXAS / FIELD OPERATIONS</span>
+                </div>
+
+                <!-- Main Editorial Headline -->
+                <h1 class="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-limestone tracking-tight uppercase leading-[0.9] max-w-5xl mb-6">
+                    TEXAS WEATHER.<br/>
+                    <span class="text-white underline decoration-vermilion/80 decoration-4 underline-offset-8">REAL WORK.</span>
+                </h1>
+
+                <!-- Sub-Headline & Description -->
+                <p class="font-sans text-lg sm:text-xl md:text-2xl text-mist/90 max-w-2xl font-light leading-relaxed mb-8">
+                    Residential and commercial HVAC, ductwork, equipment installation, replacement, and repairs from a family-owned Houston business.
+                </p>
+
+                <!-- Actions & Callouts -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 max-w-xl">
+                    <a href="#contact" class="inline-flex items-center justify-center gap-3 bg-vermilion text-white px-8 py-4 font-mono text-sm font-bold tracking-wider uppercase hover:bg-white hover:text-carbon transition-all duration-300 shadow-lg">
+                        <span>DISCUSS YOUR PROJECT</span>
+                        <span>↗</span>
+                    </a>
+                    <a href="tel:+18325379691" class="inline-flex items-center justify-center gap-3 bg-carbon-light/90 backdrop-blur border border-white/20 text-white px-6 py-4 font-mono text-sm font-bold tracking-wider uppercase hover:bg-white hover:text-carbon transition-all duration-300">
+                        <span>CALL +1 832-537-9691</span>
+                    </a>
+                </div>
+
+                <!-- Editorial Caption Marker -->
+                <div class="mt-12 pt-6 border-t border-white/15 flex flex-wrap justify-between items-center text-xs font-mono text-mist/60 gap-4">
+                    <div class="flex items-center gap-2">
+                        <span class="text-vermilion">[FIG. 001]</span>
+                        <span>PRECISION DIAGNOSIS & REFRIGERANT OPTIMIZATION • GREATER HOUSTON AREA</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="animate-bounce">↓</span>
+                        <span>SCROLL TO READ FIELD JOURNAL</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SERVICE INDEX: A TYPOGRAPHIC EDITORIAL LAYOUT -->
+        <section id="services" class="py-20 sm:py-28 bg-limestone text-carbon border-b border-fine">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="max-w-3xl mb-16 sm:mb-24">
+                    <div class="font-mono text-xs text-vermilion font-bold tracking-widest uppercase mb-3">// INDEX 01</div>
+                    <h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold uppercase tracking-tight leading-none mb-6">
+                        WHAT WE WORK ON.
+                    </h2>
+                    <p class="font-sans text-lg sm:text-xl text-carbon/80 font-light leading-relaxed">
+                        From troubleshooting an existing system to designing the ductwork behind a new installation, we work on the parts that keep buildings comfortable.
+                    </p>
+                </div>
+
+                <!-- Editorial Rows -->
+                <div class="space-y-20 sm:space-y-28">
+
+                    <!-- Service 01: System Repair -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-carbon/20 pt-8 sm:pt-12">
+                        <div class="lg:col-span-5 space-y-4">
+                            <span class="font-mono text-3xl sm:text-4xl font-extrabold text-vermilion">01 /</span>
+                            <h3 class="font-display text-2xl sm:text-3xl font-bold uppercase tracking-tight">
+                                SYSTEM REPAIR
+                            </h3>
+                            <p class="text-base sm:text-lg text-carbon/80 font-normal leading-relaxed">
+                                When a system stops performing as it should, we evaluate the problem and discuss practical repair options before assuming replacement is necessary.
+                            </p>
+                            <div class="pt-4">
+                                <a href="#contact" onclick="preselectService('System Repair')" class="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-carbon hover:text-vermilion group">
+                                    <span class="border-b border-carbon group-hover:border-vermilion py-0.5">DISCUSS THIS SERVICE</span>
+                                    <span class="transform group-hover:translate-x-1 transition-transform">↗</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-7 img-container overflow-hidden bg-carbon/10 relative group border border-carbon/10">
+                            <img 
+                                src="https://raw.githubusercontent.com/CreativeTugsDotCom/ui/refs/heads/main/Screenshot%202026-10-14%20010339.png" 
+                                alt="System Repair & Diagnostic Work" 
+                                class="w-full h-[320px] sm:h-[400px] object-cover img-editorial"
+                            />
+                            <div class="absolute bottom-3 right-3 bg-carbon text-limestone font-mono text-[10px] px-2 py-1 uppercase opacity-90">
+                                DIAGNOSTIC EVALUATION & REPAIR
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 02: Equipment Replacement & Installation -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-carbon/20 pt-8 sm:pt-12">
+                        <div class="lg:col-span-7 lg:order-1 order-2 img-container overflow-hidden bg-carbon/10 relative group border border-carbon/10">
+                            <img 
+                                src="https://raw.githubusercontent.com/CreativeTugsDotCom/ui/refs/heads/main/Screenshot%202026-10-14%20010506.png" 
+                                alt="Equipment Replacement & Installation Work" 
+                                class="w-full h-[350px] sm:h-[450px] object-cover img-editorial"
+                            />
+                            <div class="absolute bottom-3 left-3 bg-carbon text-limestone font-mono text-[10px] px-2 py-1 uppercase opacity-90">
+                                EQUIPMENT INSTALLATION & FIT
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 lg:order-2 order-1 space-y-4">
+                            <span class="font-mono text-3xl sm:text-4xl font-extrabold text-vermilion">02 /</span>
+                            <h3 class="font-display text-2xl sm:text-3xl font-bold uppercase tracking-tight">
+                                EQUIPMENT REPLACEMENT & INSTALLATION
+                            </h3>
+                            <p class="text-base sm:text-lg text-carbon/80 font-normal leading-relaxed">
+                                From replacing aging equipment to installing a new system, we help plan the work around the needs of the property.
+                            </p>
+                            <div class="pt-4">
+                                <a href="#contact" onclick="preselectService('Equipment Replacement')" class="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-carbon hover:text-vermilion group">
+                                    <span class="border-b border-carbon group-hover:border-vermilion py-0.5">DISCUSS THIS SERVICE</span>
+                                    <span class="transform group-hover:translate-x-1 transition-transform">↗</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 03: Airflow & Ductwork Design -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-carbon/20 pt-8 sm:pt-12">
+                        <div class="lg:col-span-5 space-y-4">
+                            <span class="font-mono text-3xl sm:text-4xl font-extrabold text-vermilion">03 /</span>
+                            <h3 class="font-display text-2xl sm:text-3xl font-bold uppercase tracking-tight">
+                                AIRFLOW & DUCTWORK DESIGN
+                            </h3>
+                            <p class="text-base sm:text-lg text-carbon/80 font-normal leading-relaxed">
+                                Air distribution matters. We work on ductwork design, preparation, and installation to help address airflow problems across a building.
+                            </p>
+                            <div class="pt-4">
+                                <a href="#contact" onclick="preselectService('Ductwork & Airflow')" class="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-carbon hover:text-vermilion group">
+                                    <span class="border-b border-carbon group-hover:border-vermilion py-0.5">DISCUSS THIS SERVICE</span>
+                                    <span class="transform group-hover:translate-x-1 transition-transform">↗</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-7 img-container overflow-hidden bg-carbon/10 relative group border border-carbon/10">
+                            <img 
+                                src="https://raw.githubusercontent.com/CreativeTugsDotCom/ui/refs/heads/main/Screenshot%202026-10-14%20010601.png" 
+                                alt="Airflow & Ductwork Custom Fitting" 
+                                class="w-full h-[320px] sm:h-[400px] object-cover img-editorial"
+                            />
+                            <div class="absolute bottom-3 right-3 bg-carbon text-limestone font-mono text-[10px] px-2 py-1 uppercase opacity-90">
+                                DUCTWORK & AIR DISTRIBUTION
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 04: Residential & Commercial HVAC -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-carbon/20 pt-8 sm:pt-12">
+                        <div class="lg:col-span-7 lg:order-1 order-2 img-container overflow-hidden bg-carbon/10 relative group border border-carbon/10">
+                            <img 
+                                src="https://raw.githubusercontent.com/CreativeTugsDotCom/ui/refs/heads/main/Screenshot%202026-10-14%20010647.png" 
+                                alt="Residential & Commercial HVAC Services" 
+                                class="w-full h-[350px] sm:h-[420px] object-cover img-editorial" 
+                            />
+                            <div class="absolute bottom-3 left-3 bg-carbon text-limestone font-mono text-[10px] px-2 py-1 uppercase opacity-90">
+                                RESIDENTIAL & COMMERCIAL BUILDINGS
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 lg:order-2 order-1 space-y-4">
+                            <span class="font-mono text-3xl sm:text-4xl font-extrabold text-vermilion">04 /</span>
+                            <h3 class="font-display text-2xl sm:text-3xl font-bold uppercase tracking-tight">
+                                RESIDENTIAL & COMMERCIAL HVAC
+                            </h3>
+                            <p class="text-base sm:text-lg text-carbon/80 font-normal leading-relaxed">
+                                We work with residential and commercial properties, adapting the approach to the building and the type of HVAC work required.
+                            </p>
+                            <div class="pt-4">
+                                <a href="#contact" onclick="preselectService('Residential / Commercial')" class="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-carbon hover:text-vermilion group">
+                                    <span class="border-b border-carbon group-hover:border-vermilion py-0.5">DISCUSS THIS SERVICE</span>
+                                    <span class="transform group-hover:translate-x-1 transition-transform">↗</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SIGNATURE FEATURE: THE SYSTEM BEHIND THE COMFORT -->
+        <section id="system-diagram" class="py-20 sm:py-28 bg-carbon text-limestone relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    
+                    <!-- Left Column Text Content -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div class="font-mono text-xs text-vermilion font-bold tracking-widest uppercase">// TECHNICAL BLUEPRINT</div>
+                        <h2 class="font-display text-4xl sm:text-5xl font-extrabold uppercase tracking-tight leading-none text-white">
+                            COMFORT DOESN'T HAPPEN BY ACCIDENT.
+                        </h2>
+                        <p class="font-sans text-base sm:text-lg text-mist/90 font-light leading-relaxed">
+                            An HVAC system is more than the equipment you see outside. Air distribution, ductwork design, proper sizing, and the condition of existing components all dictate actual cooling & heating performance.
+                        </p>
+
+                        <!-- Interactive Blueprint Toggle Controls -->
+                        <div class="pt-6 space-y-3 font-mono text-xs border-t border-white/10">
+                            <div class="text-mist/60 uppercase tracking-wider text-[11px] mb-2">SYSTEM SCHEMATIC CONTROL</div>
+                            <div class="flex flex-wrap gap-2">
+                                <button id="btn-airflow" onclick="toggleFlowAnimation()" class="px-3 py-2 bg-vermilion text-white font-bold uppercase transition-colors">
+                                    [AIRFLOW PATHS: ON]
+                                </button>
+                                <button id="btn-annotate" onclick="toggleAnnotations()" class="px-3 py-2 bg-carbon-light border border-white/20 text-mist hover:text-white uppercase transition-colors">
+                                    [ANNOTATIONS: ACTIVE]
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 space-y-2 text-xs font-mono text-mist/60">
+                            <p>• AIR DISTRIBUTION BALANCING</p>
+                            <p>• REFRIGERANT CYCLE HEAT EXCHANGE</p>
+                            <p>• DUCT PRESSURE LOSS MINIMIZATION</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column Interactive SVG Technical Diagram -->
+                    <div class="lg:col-span-7 bg-carbon-light border border-white/10 p-6 sm:p-8 rounded-none relative">
+                        <div class="flex justify-between items-center pb-4 border-b border-white/10 mb-6 font-mono text-[10px] text-mist/60 uppercase">
+                            <span>SCHEMATIC NO: SS-HVAC-2026-HOU</span>
+                            <span>SCALE: NON-DIMENSIONAL INTEGRATED</span>
+                        </div>
+
+                        <!-- Technical SVG Illustration -->
+                        <svg viewBox="0 0 700 450" class="w-full h-auto text-limestone" fill="none" stroke="currentColor" stroke-width="1.5">
+                            
+                            <!-- Building Contour -->
+                            <rect x="50" y="80" width="600" height="320" stroke="#D8DCD5" stroke-opacity="0.3" stroke-dasharray="4 4" />
+                            <path d="M 50 80 L 350 20 L 650 80" stroke="#D8DCD5" stroke-opacity="0.3" stroke-dasharray="4 4" />
+                            
+                            <!-- Outdoor Condenser Unit -->
+                            <g id="condenser-unit">
+                                <rect x="80" y="280" width="90" height="110" fill="#20221E" stroke="#EF5738" stroke-width="2" />
+                                <circle cx="125" cy="320" r="25" stroke="#EF5738" stroke-width="1.5" />
+                                <path d="M 125 300 L 125 340 M 105 320 L 145 320" stroke="#EF5738" stroke-width="1" />
+                                <text x="85" y="380" fill="#F1EFE7" font-family="Space Mono" font-size="9" font-weight="bold">CONDENSER</text>
+                            </g>
+
+                            <!-- Indoor Air Handler & Evaporator -->
+                            <g id="air-handler">
+                                <rect x="280" y="220" width="120" height="170" fill="#20221E" stroke="#F1EFE7" stroke-width="2" />
+                                <rect x="300" y="240" width="80" height="60" stroke="#D8DCD5" stroke-dasharray="2 2" />
+                                <text x="310" y="275" fill="#D8DCD5" font-family="Space Mono" font-size="9">EVAP COIL</text>
+                                <text x="295" y="370" fill="#F1EFE7" font-family="Space Mono" font-size="10" font-weight="bold">AIR HANDLER</text>
+                            </g>
+
+                            <!-- Refrigerant Line Set (Condenser to Air Handler) -->
+                            <path d="M 170 330 L 280 330" stroke="#EF5738" stroke-width="2" />
+                            <path d="M 170 340 L 280 340" stroke="#475446" stroke-width="2" />
+
+                            <!-- Main Supply Trunk Ductwork -->
+                            <path d="M 340 220 L 340 120 L 580 120 L 580 160" stroke="#F1EFE7" stroke-width="3" fill="none"/>
+                            <path d="M 340 140 L 460 140 L 460 180" stroke="#F1EFE7" stroke-width="2" fill="none"/>
+
+                            <!-- Return Air Ductwork -->
+                            <path d="M 220 180 L 220 290 L 280 290" stroke="#D8DCD5" stroke-width="2" stroke-dasharray="3 3" fill="none"/>
+
+                            <!-- Dynamic Animated Airflow Paths -->
+                            <g id="animated-paths" class="opacity-100 transition-opacity duration-300">
+                                <!-- Cool Air Supply Flow (Vermilion/Blue gradient indication) -->
+                                <path d="M 340 210 L 340 120 L 580 120 L 580 160" stroke="#EF5738" stroke-width="2" class="animate-airflow" fill="none"/>
+                                <path d="M 340 140 L 460 140 L 460 180" stroke="#EF5738" stroke-width="2" class="animate-airflow" fill="none"/>
+                                
+                                <!-- Return Air Flow -->
+                                <path d="M 220 180 L 220 290 L 280 290" stroke="#D8DCD5" stroke-width="2" class="animate-airflow" fill="none"/>
+                            </g>
+
+                            <!-- Annotations Group -->
+                            <g id="annotations-group" class="transition-opacity duration-300">
+                                <!-- Annotation 1: Air Distribution -->
+                                <g transform="translate(470, 100)">
+                                    <rect x="0" y="0" width="130" height="22" fill="#EF5738" />
+                                    <text x="8" y="15" fill="#FFFFFF" font-family="Space Mono" font-size="9" font-weight="bold">01. AIR DISTRIBUTION</text>
+                                    <line x1="0" y1="11" x2="-20" y2="20" stroke="#EF5738" stroke-width="1.5" />
+                                </g>
+
+                                <!-- Annotation 2: Ductwork Balance -->
+                                <g transform="translate(480, 200)">
+                                    <rect x="0" y="0" width="110" height="22" fill="#20221E" stroke="#D8DCD5" />
+                                    <text x="8" y="15" fill="#F1EFE7" font-family="Space Mono" font-size="9">02. DUCTWORK</text>
+                                </g>
+
+                                <!-- Annotation 3: Primary Equipment -->
+                                <g transform="translate(60, 240)">
+                                    <rect x="0" y="0" width="130" height="22" fill="#20221E" stroke="#EF5738" />
+                                    <text x="8" y="15" fill="#F1EFE7" font-family="Space Mono" font-size="9">03. HVAC EQUIPMENT</text>
+                                </g>
+                            </g>
+                        </svg>
+
+                        <!-- Diagram Footer Callout -->
+                        <div class="mt-4 pt-4 border-t border-white/10 flex justify-between items-center font-mono text-[11px] text-mist/70">
+                            <span>ANALYTICAL MODEL: SUPPLY & RETURN EQUALIZATION</span>
+                            <a href="#contact" class="text-vermilion hover:underline">REQUEST SYSTEM EVALUATION ↗</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FIELD WORK: MAKE THE COMPANY'S REAL PHOTOS THE STAR -->
+        <section id="field-work" class="py-20 sm:py-28 bg-limestone text-carbon border-b border-fine">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Intro -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                    <div>
+                        <div class="font-mono text-xs text-vermilion font-bold tracking-widest uppercase mb-3">// GALLERY INDEX 02</div>
+                        <h2 class="font-display text-4xl sm:text-5xl font-extrabold uppercase tracking-tight">
+                            SELECTED FIELD WORK.
+                        </h2>
+                    </div>
+                    <p class="font-sans text-base sm:text-lg text-carbon/70 max-w-md font-light">
+                        Documented installations, ductwork adjustments, and equipment repairs across Houston homes and commercial sites.
+                    </p>
+                </div>
+
+                <!-- Editorial Gallery Grid (Asymmetrical Layout) -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+                    
+                    <!-- Item 1: Wide Lead Photo -->
+                    <div class="md:col-span-8 group cursor-pointer" onclick="openLightbox(0)">
+                        <div class="img-container relative overflow-hidden bg-carbon/10 h-[320px] sm:h-[420px]">
+                            <img 
+                                src="https://raw.githubusercontent.com/CreativeTugsDotCom/ui/refs/heads/main/Screenshot%202026-10-14%20011048.png" 
+                                alt="Residential Condenser Replacement Field Work" 
+                                class="w-full h-full object-cover img-editorial"
+                            />
+                            <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-vermilion text-white font-mono text-xs font-bold px-4 py-2 uppercase tracking-wider">EXPAND ENTRY [01] ↗</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex justify-between font-mono text-xs text-carbon/70">
+                            <span>[ENTRY 001] CONDENSER UNIT REPLACEMENT</span>
+                            <span>HOUSTON, TX</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Tall Detail Photo -->
+                    <div class="md:col-span-4 group cursor-pointer" onclick="openLightbox(1)">
+                        <div class="img-container relative overflow-hidden bg-carbon/10 h-[320px] sm:h-[420px]">
+                            <img 
+                                src="https://raw.githubusercontent.com/CreativeTugsDotCom/ui/refs/heads/main/Screenshot%202026-10-14%20011238.png" 
+                                alt="Electrical & Control Diagnostics Field Work" 
+                                class="w-full h-full object-cover img-editorial"
+                            />
+                            <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-vermilion text-white font-mono text-xs font-bold px-4 py-2 uppercase tracking-wider">EXPAND ENTRY [02] ↗</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex justify-between font-mono text-xs text-carbon/70">
+                            <span>[ENTRY 002] DIAGNOSTIC INSPECTION</span>
+                            <span>ELECTRICAL PANEL</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Secondary Pair Left -->
+                    <div class="md:col-span-5 group cursor-pointer" onclick="openLightbox(2)">
+                        <div class="img-container relative overflow-hidden bg-carbon/10 h-[280px] sm:h-[350px]">
+                            <img 
+                                src="https://raw.githubusercontent.com/CreativeTugsDotCom/ui/refs/heads/main/Screenshot%202026-10-14%20011337.png" 
+                                alt="Ductwork Fabrication Field Work" 
+                                class="w-full h-full object-cover img-editorial"
+                            />
+                            <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-vermilion text-white font-mono text-xs font-bold px-4 py-2 uppercase tracking-wider">EXPAND ENTRY [03] ↗</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex justify-between font-mono text-xs text-carbon/70">
+                            <span>[ENTRY 003] AIR DUCT FABRICATION</span>
+                            <span>ATTIC INSTALLATION</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Secondary Pair Right -->
+                    <div class="md:col-span-7 group cursor-pointer" onclick="openLightbox(3)">
+                        <div class="img-container relative overflow-hidden bg-carbon/10 h-[280px] sm:h-[350px]">
+                            <img 
+                                src="https://raw.githubusercontent.com/CreativeTugsDotCom/ui/refs/heads/main/Screenshot%202026-10-14%20011517.png" 
+                                alt="Commercial Rooftop Unit Field Work" 
+                                class="w-full h-full object-cover img-editorial"
+                            />
+                            <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-vermilion text-white font-mono text-xs font-bold px-4 py-2 uppercase tracking-wider">EXPAND ENTRY [04] ↗</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex justify-between font-mono text-xs text-carbon/70">
+                            <span>[ENTRY 004] COMMERCIAL ROOFTOP SERVICE</span>
+                            <span>HVAC MECHANICAL</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- LIGHTBOX MODAL -->
+        <div id="lightbox" class="lightbox-modal fixed inset-0 z-50 bg-carbon/95 text-limestone opacity-0 pointer-events-none flex flex-col justify-between p-4 sm:p-8">
+            <div class="flex justify-between items-center font-mono text-xs border-b border-white/10 pb-4">
+                <span id="lightbox-counter">ENTRY 01 / 04</span>
+                <button onclick="closeLightbox()" class="text-white hover:text-vermilion uppercase font-bold text-sm tracking-wider">
+                    [CLOSE ✕]
+                </button>
+            </div>
+            
+            <div class="flex-1 flex items-center justify-center p-4 relative my-auto">
+                <img id="lightbox-img" src="" alt="" class="max-h-[75vh] max-w-full object-contain border border-white/10" />
+            </div>
+
+            <div class="flex justify-between items-center border-t border-white/10 pt-4 font-mono text-xs">
+                <p id="lightbox-caption" class="text-mist uppercase">CAPTION HERE</p>
+                <div class="flex gap-4">
+                    <button onclick="navigateLightbox(-1)" class="hover:text-vermilion font-bold">[← PREV]</button>
+                    <button onclick="navigateLightbox(1)" class="hover:text-vermilion font-bold">[NEXT →]</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- THE COMPANY: FAMILY-OWNED, NOT CORPORATE -->
+        <section id="about" class="py-20 sm:py-28 bg-limestone text-carbon border-b border-fine">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-6 space-y-6">
+                        <div class="font-mono text-xs text-vermilion font-bold tracking-widest uppercase">// ABOUT THE TEAM</div>
+                        <h2 class="font-display text-4xl sm:text-5xl font-extrabold uppercase tracking-tight leading-none">
+                            LOCAL PEOPLE.<br/>
+                            PRACTICAL HVAC WORK.
+                        </h2>
+                        <p class="font-sans text-lg text-carbon/80 font-normal leading-relaxed">
+                            Solutions Services AC & Heating is a family-owned, Houston-based business working across residential and commercial HVAC projects. The company handles repairs, new installations, equipment replacement, and ductwork design, with communication available in both English and Spanish.
+                        </p>
+
+                        <div class="pt-4 grid grid-cols-2 gap-4 border-t border-carbon/20 font-mono text-xs font-bold">
+                            <div class="space-y-1">
+                                <span class="text-vermilion">PROPERTIES</span>
+                                <p class="text-carbon uppercase">RESIDENTIAL + COMMERCIAL</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="text-vermilion">COMMUNICATION</span>
+                                <p class="text-carbon uppercase">ENGLISH + ESPAÑOL</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6 img-container overflow-hidden bg-carbon/10 relative border border-carbon/10">
+                        <img 
+                            src="https://raw.githubusercontent.com/CreativeTugsDotCom/ui/refs/heads/main/Screenshot%202026-10-14%20011644.png" 
+                            alt="Solutions Services HVAC Technician at work" 
+                            class="w-full h-[380px] sm:h-[480px] object-cover img-editorial"
+                        />
+                        <div class="absolute bottom-4 left-4 bg-carbon text-limestone font-mono text-xs px-3 py-1.5 uppercase">
+                            HOUSTON WORKSHOP & FIELD SERVICE
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- A BETTER DECISION: REPAIR OR REPLACE? -->
+        <section id="decision" class="py-20 sm:py-28 bg-workshop text-limestone">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="max-w-3xl mb-16">
+                    <div class="font-mono text-xs text-vermilion font-bold tracking-widest uppercase mb-3">// DECISION FRAMEWORK</div>
+                    <h2 class="font-display text-4xl sm:text-5xl font-extrabold uppercase tracking-tight leading-none mb-6 text-white">
+                        REPAIR IT OR REPLACE IT?
+                    </h2>
+                    <p class="font-sans text-lg text-mist/90 font-light leading-relaxed">
+                        Not every HVAC issue means you need an entirely new system. Depending on the condition of your equipment and the nature of the problem, a repair may be worth considering.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Option 1: Existing System Repair -->
+                    <div class="bg-carbon p-8 border border-white/10 flex flex-col justify-between space-y-6">
+                        <div>
+                            <span class="font-mono text-xs text-vermilion font-bold tracking-wider uppercase">[OPTION A]</span>
+                            <h3 class="font-display text-2xl font-bold uppercase text-white mt-2 mb-4">EXISTING SYSTEM REPAIR</h3>
+                            <p class="text-mist/80 text-sm leading-relaxed">
+                                Discuss the problem, inspect the relevant components, and explore appropriate repair options before considering total replacement.
+                            </p>
+                        </div>
+                        <a href="#contact" onclick="preselectService('System Repair')" class="inline-flex items-center justify-between w-full bg-carbon-light border border-white/20 p-4 font-mono text-xs font-bold uppercase text-white hover:bg-vermilion hover:border-vermilion transition-colors">
+                            <span>EXPLORE REPAIR OPTIONS</span>
+                            <span>↗</span>
+                        </a>
+                    </div>
+
+                    <!-- Option 2: Replacement -->
+                    <div class="bg-carbon p-8 border border-white/10 flex flex-col justify-between space-y-6">
+                        <div>
+                            <span class="font-mono text-xs text-vermilion font-bold tracking-wider uppercase">[OPTION B]</span>
+                            <h3 class="font-display text-2xl font-bold uppercase text-white mt-2 mb-4">NEW OR REPLACEMENT SYSTEM</h3>
+                            <p class="text-mist/80 text-sm leading-relaxed">
+                                Discuss installation or equipment replacement when existing equipment age, efficiency limits, or project scope call for a new unit.
+                            </p>
+                        </div>
+                        <a href="#contact" onclick="preselectService('Equipment Replacement')" class="inline-flex items-center justify-between w-full bg-carbon-light border border-white/20 p-4 font-mono text-xs font-bold uppercase text-white hover:bg-vermilion hover:border-vermilion transition-colors">
+                            <span>DISCUSS NEW SYSTEM</span>
+                            <span>↗</span>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT: MAKE THE NEXT STEP OBVIOUS -->
+        <section id="contact" class="py-20 sm:py-28 bg-carbon text-limestone">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Contact Column Left -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div>
+                            <div class="font-mono text-xs text-vermilion font-bold tracking-widest uppercase mb-3">// CONTACT & DISPATCH</div>
+                            <h2 class="font-display text-4xl sm:text-5xl font-extrabold uppercase tracking-tight text-white leading-none">
+                                TELL US WHAT'S GOING ON.
+                            </h2>
+                            <p class="font-sans text-base sm:text-lg text-mist/80 font-light mt-4 leading-relaxed">
+                                Need a repair, planning an installation, or dealing with an airflow problem? Give us the details and let's discuss the next step.
+                            </p>
+                        </div>
+
+                        <!-- Direct Phone Highlight -->
+                        <div class="bg-carbon-light p-6 border border-white/15 space-y-2">
+                            <span class="font-mono text-xs text-mist uppercase">DIRECT FIELD LINE (CALL OR TEXT)</span>
+                            <a href="tel:+18325379691" class="block font-display text-3xl sm:text-4xl font-extrabold text-vermilion hover:underline">
+                                +1 832-537-9691
+                            </a>
+                            <p class="font-mono text-xs text-mist/60 uppercase pt-1">RESPONSIVE TEAM • GREATER HOUSTON AREA</p>
+                        </div>
+
+                        <!-- Email & Socials -->
+                        <div class="space-y-3 font-mono text-xs border-t border-white/10 pt-6">
+                            <div class="flex justify-between text-mist">
+                                <span>EMAIL:</span>
+                                <a href="mailto:customerservice@solutionservicesacheating.com" class="text-white hover:text-vermilion underline">
+                                    customerservice@solutionservicesacheating.com
+                                </a>
+                            </div>
+                            <div class="flex justify-between text-mist pt-2">
+                                <span>SOCIAL CHANNELS:</span>
+                                <div class="flex gap-4">
+                                    <a href="https://www.instagram.com/solutionsservices.tx/" target="_blank" rel="noopener" class="text-white hover:text-vermilion">INSTAGRAM ↗</a>
+                                    <a href="https://www.tiktok.com/@solutionsservices.tx?lang=en" target="_blank" rel="noopener" class="text-white hover:text-vermilion">TIKTOK ↗</a>
+                                </div>
+                            </div>
+                            <div class="flex justify-between text-mist pt-2">
+                                <span>MAPS LISTING:</span>
+                                <a href="https://maps.google.com/?q=Solutions+Services+AC+%26+Heating+Houston+TX" target="_blank" rel="noopener" class="text-white hover:text-vermilion">GOOGLE MAPS ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Column Right -->
+                    <div class="lg:col-span-7 bg-carbon-light p-6 sm:p-10 border border-white/10">
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block font-mono text-xs text-mist uppercase mb-2">YOUR NAME *</label>
+                                    <input type="text" id="name" required class="w-full bg-carbon border border-white/20 p-3 text-white font-sans focus:outline-none focus:border-vermilion" placeholder="Full Name">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block font-mono text-xs text-mist uppercase mb-2">PHONE NUMBER *</label>
+                                    <input type="tel" id="phone" required class="w-full bg-carbon border border-white/20 p-3 text-white font-sans focus:outline-none focus:border-vermilion" placeholder="+1 (832) 000-0000">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="email" class="block font-mono text-xs text-mist uppercase mb-2">EMAIL ADDRESS *</label>
+                                    <input type="email" id="email" required class="w-full bg-carbon border border-white/20 p-3 text-white font-sans focus:outline-none focus:border-vermilion" placeholder="name@domain.com">
+                                </div>
+                                <div>
+                                    <label for="property-type" class="block font-mono text-xs text-mist uppercase mb-2">PROPERTY TYPE</label>
+                                    <select id="property-type" class="w-full bg-carbon border border-white/20 p-3 text-white font-sans focus:outline-none focus:border-vermilion">
+                                        <option value="Residential">Residential Property</option>
+                                        <option value="Commercial">Commercial / Industrial Building</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="service-type" class="block font-mono text-xs text-mist uppercase mb-2">REQUIRED SERVICE</label>
+                                <select id="service-type" class="w-full bg-carbon border border-white/20 p-3 text-white font-sans focus:outline-none focus:border-vermilion">
+                                    <option value="System Repair">System Diagnostic & Repair</option>
+                                    <option value="Equipment Replacement">Equipment Replacement & Installation</option>
+                                    <option value="Ductwork & Airflow">Airflow & Ductwork Design</option>
+                                    <option value="Residential / Commercial">General HVAC Inspection</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block font-mono text-xs text-mist uppercase mb-2">BRIEF DESCRIPTION OF ISSUES / PROJECT</label>
+                                <textarea id="message" rows="4" required class="w-full bg-carbon border border-white/20 p-3 text-white font-sans focus:outline-none focus:border-vermilion" placeholder="Describe cooling/heating symptoms, unit age, or project specifications..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-vermilion text-white font-mono text-sm font-bold uppercase tracking-wider py-4 hover:bg-white hover:text-carbon transition-colors duration-300">
+                                SUBMIT PROJECT DETAILS ↗
+                            </button>
+
+                            <p class="font-mono text-[10px] text-mist/50 uppercase text-center">
+                                Direct transmission to Solutions Services AC & Heating Field Office
+                            </p>
+                        </form>
+
+                        <!-- Success Alert Message Box -->
+                        <div id="form-success" class="hidden p-6 bg-workshop border border-white/20 text-white font-mono text-xs space-y-3">
+                            <div class="font-bold text-vermilion text-sm">[✓ SUBMISSION RECEIVED]</div>
+                            <p>Thank you. Your request has been logged. Our dispatch team will review your project details and respond promptly.</p>
+                            <button onclick="resetForm()" class="bg-carbon text-white px-4 py-2 uppercase text-[10px] hover:bg-vermilion">
+                                SEND ANOTHER INQUIRY
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER: QUIET, STRUCTURED, AND FINISHED -->
+    <footer class="bg-carbon text-limestone border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 border-b border-white/10 pb-8">
+                
+                <div class="flex items-center gap-4">
+                    <!-- Whirling Brand Emblem Icon -->
+                    <div class="relative w-14 h-14 bg-limestone/10 rounded-full p-2 flex items-center justify-center border border-white/10 overflow-hidden group">
+                        <img 
+                            src="https://raw.githubusercontent.com/CreativeTugsDotCom/FES/refs/heads/main/ac-logo.png" 
+                            alt="Solutions Services AC Emblem" 
+                            class="w-full h-full object-contain filter contrast-125 saturate-150 animate-logo-whirl cursor-pointer" 
+                            onerror="this.src='https://placehold.co/80x80/20221E/F1EFE7?text=SS'" 
+                        />
+                    </div>
+                    <div>
+                        <span class="font-display font-extrabold text-xl uppercase tracking-tight block text-white">
+                            SOLUTIONS SERVICES AC & HEATING
+                        </span>
+                        <span class="font-mono text-xs text-mist/60 uppercase">
+                            HVAC work for the buildings we live and work in.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-6 font-mono text-xs uppercase text-mist">
+                    <a href="#services" class="hover:text-vermilion">SERVICES</a>
+                    <a href="#system-diagram" class="hover:text-vermilion">BLUEPRINT</a>
+                    <a href="#field-work" class="hover:text-vermilion">FIELD JOURNAL</a>
+                    <a href="#about" class="hover:text-vermilion">ABOUT</a>
+                    <a href="tel:+18325379691" class="text-vermilion hover:underline">TEL: +1 832-537-9691</a>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center font-mono text-[11px] text-mist/50 gap-4">
+                <p>© 2026 SOLUTIONS SERVICES AC & HEATING. ALL RIGHTS RESERVED. HOUSTON, TX.</p>
+                <p>THE HVAC FIELD JOURNAL EDITORIAL SYSTEM</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* Mobile Navigation Toggle */
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        /* Pre-select service in form */
+        function preselectService(serviceName) {
+            const select = document.getElementById('service-type');
+            if (select) {
+                for (let i = 0; i < select.options.length; i++) {
+                    if (select.options[i].value === serviceName || select.options[i].text.includes(serviceName)) {
+                        select.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+        }
+
+        /* Technical Blueprint Controls */
+        let airflowActive = true;
+        let annotationsActive = true;
+
+        function toggleFlowAnimation() {
+            const paths = document.getElementById('animated-paths');
+            const btn = document.getElementById('btn-airflow');
+            airflowActive = !airflowActive;
+            if (airflowActive) {
+                paths.classList.remove('opacity-0');
+                btn.innerText = '[AIRFLOW PATHS: ON]';
+                btn.className = 'px-3 py-2 bg-vermilion text-white font-bold uppercase transition-colors';
+            } else {
+                paths.classList.add('opacity-0');
+                btn.innerText = '[AIRFLOW PATHS: OFF]';
+                btn.className = 'px-3 py-2 bg-carbon-light border border-white/20 text-mist uppercase transition-colors';
+            }
+        }
+
+        function toggleAnnotations() {
+            const group = document.getElementById('annotations-group');
+            const btn = document.getElementById('btn-annotate');
+            annotationsActive = !annotationsActive;
+            if (annotationsActive) {
+                group.classList.remove('opacity-0');
+                btn.innerText = '[ANNOTATIONS: ACTIVE]';
+                btn.className = 'px-3 py-2 bg-carbon-light border border-white/20 text-mist hover:text-white uppercase transition-colors';
+            } else {
+                group.classList.add('opacity-0');
+                btn.innerText = '[ANNOTATIONS: HIDDEN]';
+                btn.className = 'px-3 py-2 bg-carbon-light border border-white/20 text-mist/40 uppercase transition-colors';
+            }
+        }
+
+        /* Lightbox Gallery Data & Controls */
+        const galleryItems = [
+            {
+                src: "https://raw.githubusercontent.com/CreativeTugsDotCom/ui/refs/heads/main/Screenshot%202026-10-14%20011048.png",
+                caption: "ENTRY 001 // CONDENSER UNIT REPLACEMENT - PRECISION LEVELING & CHARGING - HOUSTON, TX"
+            },
+            {
+                src: "https://raw.githubusercontent.com/CreativeTugsDotCom/ui/refs/heads/main/Screenshot%202026-10-14%20011238.png",
+                caption: "ENTRY 002 // ELECTRICAL DIAGNOSTICS & CAPACITOR CIRCUITRY TESTING"
+            },
+            {
+                src: "https://raw.githubusercontent.com/CreativeTugsDotCom/ui/refs/heads/main/Screenshot%202026-10-14%20011337.png",
+                caption: "ENTRY 003 // CUSTOM AIR DUCT FABRICATION & ATTIC SEALING"
+            },
+            {
+                src: "https://raw.githubusercontent.com/CreativeTugsDotCom/ui/refs/heads/main/Screenshot%202026-10-14%20011517.png",
+                caption: "ENTRY 004 // COMMERCIAL ROOFTOP MECHANICAL SERVICE & PACKAGE UNIT FIT"
+            }
+        ];
+
+        let currentLightboxIdx = 0;
+
+        function openLightbox(index) {
+            currentLightboxIdx = index;
+            updateLightboxContent();
+            const modal = document.getElementById('lightbox');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'auto';
+        }
+
+        function navigateLightbox(dir) {
+            currentLightboxIdx = (currentLightboxIdx + dir + galleryItems.length) % galleryItems.length;
+            updateLightboxContent();
+        }
+
+        function updateLightboxContent() {
+            const img = document.getElementById('lightbox-img');
+            const caption = document.getElementById('lightbox-caption');
+            const counter = document.getElementById('lightbox-counter');
+
+            img.src = galleryItems[currentLightboxIdx].src;
+            caption.innerText = galleryItems[currentLightboxIdx].caption;
+            counter.innerText = `ENTRY 0${currentLightboxIdx + 1} / 0${galleryItems.length}`;
+        }
+
+        /* Keyboard Support for Lightbox */
+        document.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('lightbox');
+            if (!modal.classList.contains('pointer-events-none')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') navigateLightbox(1);
+                if (e.key === 'ArrowLeft') navigateLightbox(-1);
+            }
+        });
+
+        /* Form Submission Logic */
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const form = document.getElementById('contact-form');
+            const success = document.getElementById('form-success');
+
+            form.classList.add('hidden');
+            success.classList.remove('hidden');
+        }
+
+        function resetForm() {
+            const form = document.getElementById('contact-form');
+            const success = document.getElementById('form-success');
+
+            form.reset();
+            form.classList.remove('hidden');
+            success.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
